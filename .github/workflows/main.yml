@@ -11,13 +11,13 @@ jobs:
     runs-on: windows-2016
     steps:
       - name: Install vcpkg packages
-	run: c:\vcpkg\vcpkg.exe --triplet=x86-windows-static install asio gtest libvpx libyuv openssl opus protobuf qt5-base qt5-translations qt5-winextras rapidjson rapidxml sqlite3 zstd
+        run: c:\vcpkg\vcpkg.exe --triplet=x86-windows-static install asio gtest libvpx libyuv openssl opus protobuf qt5-base qt5-translations qt5-winextras rapidjson rapidxml sqlite3 zstd
       - name：Checkout
         uses：actions/checkout@v2
       - name：generate vs project
         run： |
 	  mkdir build
-          cd build
+	  cd build
           cmake ..\ -G "Visual Studio 15 2017" -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windows-static
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
