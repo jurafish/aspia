@@ -15,10 +15,10 @@ jobs:
       - name：Checkout
         uses：actions/checkout@v2
       - name：generate vs project
-        run： |
-	  mkdir build
-	  cd build
-          cmake ..\ -G "Visual Studio 15 2017" -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windows-static
+        run：|
+             mkdir build
+	     cd build
+             cmake ..\ -G "Visual Studio 15 2017" -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windows-static
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
