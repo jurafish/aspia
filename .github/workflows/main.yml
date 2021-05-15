@@ -18,8 +18,7 @@ jobs:
         run：|
             mkdir build
             cd build
-            cmake ..\ -G "Visu
-	    al Studio 15 2017" -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windows-static
+            cmake ..\ -G "Visual Studio 15 2017" -DCMAKE_TOOLCHAIN_FILE=c:\vcpkg\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windows-static
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
