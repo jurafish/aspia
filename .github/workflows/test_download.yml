@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install vcpkg packages
-        run: /usr/local/share/vcpkg/vcpkg --triplet=x86-windows-static install libyuv
+        run: /usr/local/share/vcpkg/vcpkg --triplet=x86-mingw-static install libyuv
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
