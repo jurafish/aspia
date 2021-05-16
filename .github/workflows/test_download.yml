@@ -8,16 +8,15 @@ jobs:
     name: Save output
     runs-on: ubuntu-latest
     steps:
-      - shell: bash
-        run: |
-          expr 1 + 1 > output.log
+      - name: Install vcpkg packages
+        run: c:\vcpkg\vcpkg.exe --triplet=x86-windows-static install libyuv
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
-          name: output-log-file
-          path: output.log
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v1
+          name: libyuv
+          path: c:\vcpkg\downloads
+      - name: Setup Debug Session
+        uses: csexton/debugger-action@master
       - name: Download a single artifact
         uses: actions/download-artifact@v2
         with:
