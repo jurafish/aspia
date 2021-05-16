@@ -1,4 +1,4 @@
-name: Build Aspia
+name: upload_download_test
 
 on:
   workflow_dispatch
@@ -16,3 +16,7 @@ jobs:
         with:
           name: output-log-file
           path: output.log
+      - name: Download a single artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: output-log-file
