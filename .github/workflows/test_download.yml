@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install vcpkg packages
-        run: c:\vcpkg\vcpkg.exe --triplet=x86-windows-static install libyuv
+        run: /usr/local/share/vcpkg --triplet=x86-windows-static install libyuv
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
           name: libyuv
-          path: c:\vcpkg\downloads
+          path: /usr/local/share/vcpkg/downloads
       - name: Setup Debug Session
         uses: csexton/debugger-action@master
       - name: Download a single artifact
