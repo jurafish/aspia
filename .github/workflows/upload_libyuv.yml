@@ -1,0 +1,17 @@
+name: upload_download_test1
+
+on:
+  workflow_dispatch
+
+jobs:
+  example-job:
+    name: libyuv
+    runs-on: windows-2016
+    steps:
+      - name: Install vcpkg packages
+        run: c:\vcpkg\vcpkg.exe --triplet=x86-windows-static install libyuv
+      - name: Upload output file
+        uses: actions/upload-artifact@v2
+        with:
+          name: libyuv
+          path: c:\vcpkg\downloads
