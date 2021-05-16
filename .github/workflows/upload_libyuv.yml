@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-2016
     steps:
       - name: Install vcpkg packages
-        run: c:\vcpkg\vcpkg.exe --triplet=x86-windows-static install libyuv
+        run: c:\vcpkg\vcpkg.exe --triplet=x86-windows-static install asio gtest libvpx libyuv openssl opus protobuf qt5-base qt5-translations qt5-winextras rapidjson rapidxml sqlite3 zstd
       - name: Upload output file
         uses: actions/upload-artifact@v2
         with:
