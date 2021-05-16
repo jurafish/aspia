@@ -6,8 +6,8 @@ env:
   DOCKER_BUILDKIT: 1
 
 jobs:
-  install cmake:
-    name: install cmake
+  install_cmake:
+    name: install_cmake
     runs-on: windows-2016
     steps:
       - name: Install vcpkg packages
