@@ -35,37 +35,37 @@
 <context>
     <name>Client</name>
     <message>
-        <location filename="../client_main.cc" line="50"/>
+        <location filename="../client_main.cc" line="52"/>
         <source>Remote computer address.</source>
         <translation>Адрес удаленного компьютера.</translation>
     </message>
     <message>
-        <location filename="../client_main.cc" line="53"/>
+        <location filename="../client_main.cc" line="55"/>
         <source>Remote computer port.</source>
         <translation>Порт удаленного компьютера.</translation>
     </message>
     <message>
-        <location filename="../client_main.cc" line="57"/>
+        <location filename="../client_main.cc" line="59"/>
         <source>Name of user.</source>
         <translation>Имя пользователя.</translation>
     </message>
     <message>
-        <location filename="../client_main.cc" line="60"/>
+        <location filename="../client_main.cc" line="62"/>
         <source>Session type. Possible values: desktop-manage, desktop-view, file-transfer.</source>
         <translation>Тип сессии. Возможные значения: desktop-manager, desktop-view, file-transfer.</translation>
     </message>
     <message>
-        <location filename="../client_main.cc" line="65"/>
+        <location filename="../client_main.cc" line="67"/>
         <source>Aspia Client</source>
         <translation>Клиент Aspia</translation>
     </message>
     <message>
-        <location filename="../client_main.cc" line="101"/>
+        <location filename="../client_main.cc" line="103"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location filename="../client_main.cc" line="102"/>
+        <location filename="../client_main.cc" line="104"/>
         <source>Incorrect session type entered.</source>
         <translation>Введен некорректный тип сессии.</translation>
     </message>
@@ -1966,32 +1966,32 @@
         <translation>Произошла ошибка при построении очереди файлов для копирования</translation>
     </message>
     <message>
-        <location filename="../ui/file_transfer_dialog.cc" line="261"/>
+        <location filename="../ui/file_transfer_dialog.cc" line="260"/>
         <source>Failed to create directory &quot;%1&quot;: %2</source>
         <translation>Не удалось создать директорию &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location filename="../ui/file_transfer_dialog.cc" line="270"/>
+        <location filename="../ui/file_transfer_dialog.cc" line="268"/>
         <source>Failed to create file &quot;%1&quot;: %2</source>
         <translation>Не удалось создать файл &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location filename="../ui/file_transfer_dialog.cc" line="278"/>
+        <location filename="../ui/file_transfer_dialog.cc" line="275"/>
         <source>Failed to open file &quot;%1&quot;: %2</source>
         <translation>Не удалось открыть файл &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location filename="../ui/file_transfer_dialog.cc" line="286"/>
+        <location filename="../ui/file_transfer_dialog.cc" line="282"/>
         <source>Failed to write file &quot;%1&quot;: %2</source>
         <translation>Не удалось выполнить запись файла &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location filename="../ui/file_transfer_dialog.cc" line="294"/>
+        <location filename="../ui/file_transfer_dialog.cc" line="289"/>
         <source>Failed to read file &quot;%1&quot;: %2</source>
         <translation>Не удалось прочитать файл &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location filename="../ui/file_transfer_dialog.cc" line="302"/>
+        <location filename="../ui/file_transfer_dialog.cc" line="296"/>
         <source>Unknown error type while copying files</source>
         <translation>Неизвестный тип ошибки при копировании файлов</translation>
     </message>
@@ -2018,19 +2018,19 @@
         <translation type="obsolete">Просмотр рабочего стола</translation>
     </message>
     <message>
-        <location filename="../ui/qt_desktop_window.cc" line="222"/>
-        <location filename="../ui/qt_desktop_window.cc" line="230"/>
-        <location filename="../ui/qt_desktop_window.cc" line="561"/>
+        <location filename="../ui/qt_desktop_window.cc" line="224"/>
+        <location filename="../ui/qt_desktop_window.cc" line="232"/>
+        <location filename="../ui/qt_desktop_window.cc" line="582"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location filename="../ui/qt_desktop_window.cc" line="223"/>
+        <location filename="../ui/qt_desktop_window.cc" line="225"/>
         <source>There are no supported video encodings.</source>
         <translation>Нет поддерживаемых кодировок видео.</translation>
     </message>
     <message>
-        <location filename="../ui/qt_desktop_window.cc" line="231"/>
+        <location filename="../ui/qt_desktop_window.cc" line="233"/>
         <source>The current video encoding is not supported by the host. Please specify a different video encoding.</source>
         <translation>Текущий видео-кодек не поддерживается хостом. Пожалуйста, выберите другой кодек.</translation>
     </message>
@@ -2039,17 +2039,17 @@
         <translation type="obsolete">Выбор поддерживаемой видео-кодировки отменен пользователем.</translation>
     </message>
     <message>
-        <location filename="../ui/qt_desktop_window.cc" line="539"/>
+        <location filename="../ui/qt_desktop_window.cc" line="560"/>
         <source>Save File</source>
         <translation>Сохранение файла</translation>
     </message>
     <message>
-        <location filename="../ui/qt_desktop_window.cc" line="541"/>
+        <location filename="../ui/qt_desktop_window.cc" line="562"/>
         <source>PNG Image (*.png);;BMP Image (*.bmp)</source>
         <translation>PNG изображение (*.png);;BMP изображение (*.bmp)</translation>
     </message>
     <message>
-        <location filename="../ui/qt_desktop_window.cc" line="561"/>
+        <location filename="../ui/qt_desktop_window.cc" line="582"/>
         <source>Could not save image</source>
         <translation>Не удалось сохранить изображение</translation>
     </message>
@@ -2295,7 +2295,7 @@
         <translation>Время подключения</translation>
     </message>
     <message>
-        <location filename="../ui/router_manager_window.cc" line="600"/>
+        <location filename="../ui/router_manager_window.cc" line="601"/>
         <source>Version</source>
         <translation>Версия</translation>
     </message>
@@ -2323,7 +2323,7 @@
         <location filename="../ui/router_user_dialog.cc" line="155"/>
         <location filename="../ui/router_user_dialog.cc" line="169"/>
         <location filename="../ui/router_user_dialog.cc" line="192"/>
-        <location filename="../ui/router_user_dialog.cc" line="217"/>
+        <location filename="../ui/router_user_dialog.cc" line="216"/>
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
@@ -2375,22 +2375,22 @@
         <translation>Вы хотите ввести другой пароль?</translation>
     </message>
     <message>
-        <location filename="../ui/router_user_dialog.cc" line="218"/>
+        <location filename="../ui/router_user_dialog.cc" line="217"/>
         <source>Unknown internal error when creating or modifying a user.</source>
         <translation>Неизвестная внутренняя ошибка при создании или изменении пользователя.</translation>
     </message>
     <message>
-        <location filename="../ui/router_user_dialog.cc" line="266"/>
+        <location filename="../ui/router_user_dialog.cc" line="265"/>
         <source>Double-click to change</source>
         <translation>Двойной щелчок для изменения</translation>
     </message>
     <message>
-        <location filename="../ui/router_user_dialog.cc" line="290"/>
+        <location filename="../ui/router_user_dialog.cc" line="289"/>
         <source>Administrator</source>
         <translation>Администратор</translation>
     </message>
     <message>
-        <location filename="../ui/router_user_dialog.cc" line="294"/>
+        <location filename="../ui/router_user_dialog.cc" line="293"/>
         <source>Client</source>
         <translation>Клиент</translation>
     </message>

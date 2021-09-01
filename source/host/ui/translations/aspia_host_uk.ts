@@ -150,18 +150,18 @@
         <translation type="vanished">Запустити оновлення програми.</translation>
     </message>
     <message>
-        <location filename="../host_main.cc" line="103"/>
-        <location filename="../host_main.cc" line="116"/>
+        <location filename="../host_main.cc" line="106"/>
+        <location filename="../host_main.cc" line="125"/>
         <source>Warning</source>
         <translation>Попередження</translation>
     </message>
     <message>
-        <location filename="../host_main.cc" line="104"/>
+        <location filename="../host_main.cc" line="107"/>
         <source>Application integrity check failed. Components are missing or damaged.</source>
         <translation>Перевірку цілістності програми не пройдено. Певні компоненти відсутні або пошкоджені.</translation>
     </message>
     <message>
-        <location filename="../host_main.cc" line="117"/>
+        <location filename="../host_main.cc" line="126"/>
         <source>Export and import parameters can not be specified together.</source>
         <translation>Параметри імпорту і експорту не можуть бути задані одночасно.</translation>
     </message>
@@ -430,34 +430,46 @@
 <context>
     <name>SettingsUtil</name>
     <message>
-        <location filename="../settings_util.cc" line="36"/>
-        <location filename="../settings_util.cc" line="52"/>
+        <location filename="../settings_util.cc" line="41"/>
+        <location filename="../settings_util.cc" line="61"/>
         <source>Information</source>
         <translation>Інформація</translation>
     </message>
     <message>
-        <location filename="../settings_util.cc" line="37"/>
+        <location filename="../settings_util.cc" line="42"/>
         <source>The configuration was successfully imported.</source>
         <translation>Конфігурацію імпортовано успішно.</translation>
     </message>
     <message>
-        <location filename="../settings_util.cc" line="53"/>
+        <location filename="../settings_util.cc" line="62"/>
         <source>The configuration was successfully exported.</source>
         <translation>Кофігурацію експортовано успішно.</translation>
     </message>
     <message>
-        <location filename="../settings_util.cc" line="74"/>
-        <location filename="../settings_util.cc" line="87"/>
+        <location filename="../settings_util.cc" line="84"/>
+        <location filename="../settings_util.cc" line="112"/>
+        <location filename="../settings_util.cc" line="129"/>
+        <location filename="../settings_util.cc" line="152"/>
         <source>Warning</source>
         <translation>Попередження</translation>
     </message>
     <message>
-        <location filename="../settings_util.cc" line="75"/>
+        <location filename="../settings_util.cc" line="85"/>
+        <source>Source settings file does not exist.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settings_util.cc" line="113"/>
         <source>Unable to read the source file: the file is damaged or has an unknown format.</source>
         <translation>Неможливо прочитати вихідний файл: файл пошкоджено або формат файлу невідомний.</translation>
     </message>
     <message>
-        <location filename="../settings_util.cc" line="88"/>
+        <location filename="../settings_util.cc" line="130"/>
+        <source>The existing settings will be overwritten. Continue?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../settings_util.cc" line="153"/>
         <source>Unable to write the target file.</source>
         <translation>Неможливо записати цільовий файл.</translation>
     </message>
@@ -549,12 +561,12 @@
         <location filename="../config_dialog.cc" line="365"/>
         <location filename="../config_dialog.cc" line="397"/>
         <location filename="../config_dialog.cc" line="410"/>
-        <location filename="../config_dialog.cc" line="590"/>
-        <location filename="../config_dialog.cc" line="609"/>
-        <location filename="../config_dialog.cc" line="624"/>
-        <location filename="../config_dialog.cc" line="634"/>
-        <location filename="../config_dialog.cc" line="650"/>
-        <location filename="../config_dialog.cc" line="660"/>
+        <location filename="../config_dialog.cc" line="591"/>
+        <location filename="../config_dialog.cc" line="610"/>
+        <location filename="../config_dialog.cc" line="625"/>
+        <location filename="../config_dialog.cc" line="635"/>
+        <location filename="../config_dialog.cc" line="651"/>
+        <location filename="../config_dialog.cc" line="661"/>
         <source>Warning</source>
         <translation>Попередження</translation>
     </message>
@@ -569,75 +581,75 @@
         <translation>Введено неправильний відкритий ключ маршрутизатора.</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="524"/>
+        <location filename="../config_dialog.cc" line="525"/>
         <source>Remove</source>
         <translation>Видалити</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="533"/>
+        <location filename="../config_dialog.cc" line="534"/>
         <source>Started</source>
         <translation>Розпочато</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="534"/>
+        <location filename="../config_dialog.cc" line="535"/>
         <source>Stop</source>
         <translation>Зупинити</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="539"/>
+        <location filename="../config_dialog.cc" line="540"/>
         <source>Not started</source>
         <translation>Не розпочато</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="540"/>
-        <location filename="../config_dialog.cc" line="547"/>
-        <location filename="../config_dialog.cc" line="560"/>
+        <location filename="../config_dialog.cc" line="541"/>
+        <location filename="../config_dialog.cc" line="548"/>
+        <location filename="../config_dialog.cc" line="561"/>
         <source>Start</source>
         <translation>Почати</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="546"/>
+        <location filename="../config_dialog.cc" line="547"/>
         <source>Installed</source>
         <translation>Встановлено</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="557"/>
+        <location filename="../config_dialog.cc" line="558"/>
         <source>Not installed</source>
         <translation>Не встановлено</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="559"/>
+        <location filename="../config_dialog.cc" line="560"/>
         <source>Install</source>
         <translation>Встановити</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="564"/>
+        <location filename="../config_dialog.cc" line="565"/>
         <source>Current state: %1</source>
         <translation>Поточний стан: %1</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="591"/>
+        <location filename="../config_dialog.cc" line="592"/>
         <source>The service could not be installed.</source>
         <translation>Неможливо встановити службу.</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="610"/>
+        <location filename="../config_dialog.cc" line="611"/>
         <source>The service could not be removed.</source>
         <translation>Неможливо видалити службу.</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="625"/>
-        <location filename="../config_dialog.cc" line="651"/>
+        <location filename="../config_dialog.cc" line="626"/>
+        <location filename="../config_dialog.cc" line="652"/>
         <source>Could not access the service.</source>
         <translation>Немає доступу до служби.</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="635"/>
+        <location filename="../config_dialog.cc" line="636"/>
         <source>The service could not be started.</source>
         <translation>Неможливо запустити службу.</translation>
     </message>
     <message>
-        <location filename="../config_dialog.cc" line="661"/>
+        <location filename="../config_dialog.cc" line="662"/>
         <source>The service could not be stopped.</source>
         <translation>Неможливо зупинити службу.</translation>
     </message>
@@ -873,7 +885,7 @@
         <location filename="../user_dialog.cc" line="150"/>
         <location filename="../user_dialog.cc" line="161"/>
         <location filename="../user_dialog.cc" line="183"/>
-        <location filename="../user_dialog.cc" line="200"/>
+        <location filename="../user_dialog.cc" line="199"/>
         <source>Warning</source>
         <translation>Попередження</translation>
     </message>
@@ -925,12 +937,12 @@
         <translation>Бажаєте ввести інший пароль?</translation>
     </message>
     <message>
-        <location filename="../user_dialog.cc" line="201"/>
+        <location filename="../user_dialog.cc" line="200"/>
         <source>Unknown internal error when creating or modifying a user.</source>
         <translation>Невідома внутрішня помилка під час створення або редагування користувача.</translation>
     </message>
     <message>
-        <location filename="../user_dialog.cc" line="255"/>
+        <location filename="../user_dialog.cc" line="254"/>
         <source>Double-click to change</source>
         <translation>Подвійний клік для зміни</translation>
     </message>

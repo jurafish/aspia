@@ -1,6 +1,6 @@
 //
 // Aspia Project
-// Copyright (C) 2020 Dmitry Chapyshev <dmitry@aspia.ru>
+// Copyright (C) 2021 Dmitry Chapyshev <dmitry@aspia.ru>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -16,31 +16,31 @@
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 //
 
-#include "base/net/ip_util.h"
+#ifndef BASE__SCOPED_LOGGING_H
+#define BASE__SCOPED_LOGGING_H
 
-#include "base/strings/unicode.h"
-#include "build/build_config.h"
-
-#if defined(OS_WIN)
-#include <WS2tcpip.h>
-#elif defined(OS_POSIX)
-#include <arpa/inet.h>
-#else
-#error Platform support not implemented
-#endif // defined(OS_*)
+#include "base/logging.h"
 
 namespace base {
 
-bool isValidIpV4Address(std::u16string_view address)
+class ScopedLogging
 {
-    struct sockaddr_in sa;
-    return inet_pton(AF_INET, base::local8BitFromUtf16(address).c_str(), &(sa.sin_addr)) != 0;
-}
+public:
+    ScopedLogging(const LoggingSettings& settings = LoggingSettings())
+    {
+        initialized_ = initLogging(settings);
+    }
 
-bool isValidIpV6Address(std::u16string_view address)
-{
-    struct sockaddr_in6 sa;
-    return inet_pton(AF_INET6, base::local8BitFromUtf16(address).c_str(), &(sa.sin6_addr)) != 0;
-}
+    ~ScopedLogging()
+    {
+        if (initialized_)
+            shutdownLogging();
+    }
+
+private:
+    bool initialized_ = false;
+};
 
 } // namespace base
+
+#endif // BASE__SCOPED_LOGGING_H

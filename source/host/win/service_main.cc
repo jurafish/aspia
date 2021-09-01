@@ -18,7 +18,7 @@
 
 #include "host/win/service_main.h"
 
-#include "base/logging.h"
+#include "base/scoped_logging.h"
 #include "build/version.h"
 #include "host/integrity_check.h"
 #include "host/win/service.h"
@@ -27,7 +27,7 @@ namespace host {
 
 void hostServiceMain()
 {
-    base::initLogging();
+    base::ScopedLogging scoped_logging;
 
     LOG(LS_INFO) << "Version: " << ASPIA_VERSION_STRING;
 
@@ -37,10 +37,9 @@ void hostServiceMain()
     }
     else
     {
+        LOG(LS_INFO) << "Integrity check passed successfully";
         Service().exec();
     }
-
-    base::shutdownLogging();
 }
 
 } // namespace host

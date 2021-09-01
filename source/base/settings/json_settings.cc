@@ -42,7 +42,7 @@ std::string createKey(const std::vector<std::string_view>& segments)
     {
         if (i != 0)
             key += Settings::kSeparator;
-        key.append(segments.at(i));
+        key.append(segments[i]);
     }
 
     return key;
@@ -149,9 +149,9 @@ void JsonSettings::sync()
     readFile(path_, map());
 }
 
-void JsonSettings::flush()
+bool JsonSettings::flush()
 {
-    writeFile(path_, map());
+    return writeFile(path_, map());
 }
 
 // static
@@ -303,7 +303,7 @@ bool JsonSettings::writeFile(const std::filesystem::path& file, const Map& map, 
         {
             if (i != segments.size() - 1)
             {
-                std::string_view& segment = segments.at(i);
+                std::string_view& segment = segments[i];
                 json.Key(segment.data(), segment.length());
                 json.StartObject();
             }

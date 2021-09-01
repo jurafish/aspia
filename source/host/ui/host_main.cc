@@ -19,7 +19,6 @@
 #include "host/ui/host_main.h"
 
 #include "base/command_line.h"
-#include "base/logging.h"
 #include "build/version.h"
 #include "host/integrity_check.h"
 #include "host/system_settings.h"
@@ -27,6 +26,7 @@
 #include "host/ui/main_window.h"
 #include "host/ui/settings_util.h"
 #include "common/ui/update_dialog.h"
+#include "qt_base/scoped_qt_logging.h"
 
 #if defined(OS_WIN)
 #include "base/win/process_util.h"
@@ -71,6 +71,7 @@ int hostMain(int argc, char* argv[])
     Q_INIT_RESOURCE(common);
     Q_INIT_RESOURCE(common_translations);
 
+    qt_base::ScopedQtLogging scoped_logging;
     base::CommandLine command_line(argc, argv);
 
     LOG(LS_INFO) << "Version: " << ASPIA_VERSION_STRING;
@@ -98,6 +99,8 @@ int hostMain(int argc, char* argv[])
 
     if (!host::integrityCheck())
     {
+        LOG(LS_WARNING) << "Integrity check failed";
+
         QMessageBox::warning(
             nullptr,
             QApplication::translate("Host", "Warning"),
@@ -106,9 +109,15 @@ int hostMain(int argc, char* argv[])
             QMessageBox::Ok);
         return 1;
     }
+    else
+    {
+        LOG(LS_INFO) << "Integrity check passed successfully";
+    }
 
     if (command_line.hasSwitch(u"import") && command_line.hasSwitch(u"export"))
     {
+        LOG(LS_WARNING) << "Import and export are specified at the same time";
+
         if (!command_line.hasSwitch(u"silent"))
         {
             QMessageBox::warning(

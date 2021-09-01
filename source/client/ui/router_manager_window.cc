@@ -43,14 +43,14 @@ public:
         : session(session)
     {
         QString time = QLocale::system().toString(
-            QDateTime::fromTime_t(session.timepoint()), QLocale::ShortFormat);
+            QDateTime::fromTime_t(static_cast<uint>(session.timepoint())), QLocale::ShortFormat);
 
         setText(0, QString::fromStdString(session.computer_name()));
         setText(1, QString::fromStdString(session.ip_address()));
         setText(2, time);
     }
 
-    ~HostTreeItem() = default;
+    ~HostTreeItem() override = default;
 
     proto::Session session;
 
@@ -64,7 +64,7 @@ public:
     explicit RelayTreeItem(const proto::Session& session)
     {
         QString time = QLocale::system().toString(
-            QDateTime::fromTime_t(session.timepoint()), QLocale::ShortFormat);
+            QDateTime::fromTime_t(static_cast<uint>(session.timepoint())), QLocale::ShortFormat);
 
         setText(0, QString::fromStdString(session.ip_address()));
         setText(1, time);
@@ -74,11 +74,11 @@ public:
         {
             setText(2, QString::number(session_data.pool_size()));
         }
+
+        const proto::Version& version = session.version();
         
         setText(3, QString("%1.%2.%3")
-                .arg(session.version().major())
-                .arg(session.version().minor())
-                .arg(session.version().patch()));
+            .arg(version.major()).arg(version.minor()).arg(version.patch()));
         setText(4, QString::fromStdString(session.computer_name()));
         setText(5, QString::fromStdString(session.os_name()));
     }
@@ -96,9 +96,9 @@ public:
         setText(0, QString::fromStdString(user.name()));
 
         if (user.flags() & base::User::ENABLED)
-            setIcon(0, QIcon(QLatin1String(":/img/user.png")));
+            setIcon(0, QIcon(QStringLiteral(":/img/user.png")));
         else
-            setIcon(0, QIcon(QLatin1String(":/img/user-disabled.png")));
+            setIcon(0, QIcon(QStringLiteral(":/img/user-disabled.png")));
     }
 
     base::User user;
@@ -592,14 +592,14 @@ void RouterManagerWindow::onCurrentHostChanged(QTreeWidgetItem* current,
         };
 
         QString time = QLocale::system().toString(
-            QDateTime::fromTime_t(session.timepoint()), QLocale::ShortFormat);
+            QDateTime::fromTime_t(static_cast<uint>(session.timepoint())), QLocale::ShortFormat);
 
         add_item(tr("Computer Name"), QString::fromStdString(session.computer_name()));
         add_item(tr("IP Address"), QString::fromStdString(session.ip_address()));
         add_item(tr("Connect Time"), time);
-        add_item(tr("Version"), QString("%1.%2.%3").arg(session.version().major())
-                                                   .arg(session.version().minor())
-                                                   .arg(session.version().patch()));
+        const proto::Version& version = session.version();
+        add_item(tr("Version"), QString("%1.%2.%3")
+            .arg(version.major()).arg(version.minor()).arg(version.patch()));
         add_item(tr("Operating System"), QString::fromStdString(session.os_name()));
 
         proto::HostSessionData session_data;

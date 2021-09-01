@@ -16,33 +16,33 @@
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 //
 
-#ifndef BASE__DESKTOP__CURSOR_CAPTURER_WIN_H
-#define BASE__DESKTOP__CURSOR_CAPTURER_WIN_H
+#ifndef QT_BASE__SCOPED_QT_LOGGING_H
+#define QT_BASE__SCOPED_QT_LOGGING_H
 
-#include "base/win/scoped_hdc.h"
-#include "desktop/cursor_capturer.h"
+#include "qt_base/qt_logging.h"
 
-#include <memory>
+namespace qt_base {
 
-namespace base {
-
-class CursorCapturerWin : public CursorCapturer
+class ScopedQtLogging
 {
 public:
-    CursorCapturerWin();
-    ~CursorCapturerWin();
+    ScopedQtLogging(const base::LoggingSettings& settings = base::LoggingSettings())
+    {
+        initialized_ = base::initLogging(settings);
+        if (initialized_)
+            initQtLogging();
+    }
 
-    const MouseCursor* captureCursor() override;
-    void reset() override;
+    ~ScopedQtLogging()
+    {
+        if (initialized_)
+            base::shutdownLogging();
+    }
 
 private:
-    win::ScopedGetDC desktop_dc_;
-    std::unique_ptr<MouseCursor> mouse_cursor_;
-    CURSORINFO prev_cursor_info_;
-
-    DISALLOW_COPY_AND_ASSIGN(CursorCapturerWin);
+    bool initialized_ = false;
 };
 
-} // namespace base
+} // namespace qt_base
 
-#endif // BASE__DESKTOP__CURSOR_CAPTURER_WIN_H
+#endif // QT_BASE__SCOPED_QT_LOGGING_H
